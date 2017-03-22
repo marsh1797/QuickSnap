@@ -26,6 +26,8 @@ namespace CardGames
 			if (SwinGame.KeyTyped (KeyCode.vk_SPACE))
 			{
 				myGame.Start ();
+				SwinGame.LoadSoundEffectNamed ("Slap", "slaps.wav");
+				SwinGame.PlaySoundEffect ("Slap");
 			}
 
 			if (myGame.IsStarted)
@@ -33,8 +35,9 @@ namespace CardGames
 				if (SwinGame.KeyTyped (KeyCode.vk_LSHIFT) && 
 					SwinGame.KeyTyped (KeyCode.vk_RSHIFT))
 				{
-					SwinGame.LoadSoundEffectNamed ("Slap", "slap.wav");
+					SwinGame.LoadSoundEffectNamed ("Slap", "slaps.wav");
 					SwinGame.PlaySoundEffect ("Slap");
+					//SwinGame.PlaySoundEffect ("Slap");
 				}
 				else if (SwinGame.KeyTyped (KeyCode.vk_LSHIFT))
 				{
